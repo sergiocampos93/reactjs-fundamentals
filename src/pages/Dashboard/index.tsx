@@ -92,7 +92,7 @@ const Dashboard: React.FC = () => {
 
             <tbody>
               {transactions.map(transaction => (
-                <tr>
+                <tr key={transaction.id}>
                   <td className="title">{transaction.title}</td>
                   {transaction.type === 'income' ? (
                     <td className="income">{formatValue(transaction.value)}</td>
